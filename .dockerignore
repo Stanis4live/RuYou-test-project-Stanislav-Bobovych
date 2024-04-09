@@ -1,0 +1,15 @@
+.venv
+External Libraries
+Scratches and consoles
+*.pyc
+__pycache__
+*.pyo
+*.pyd
+.Python
+.env
+ENV
+env.bak
+venv.bak
+.dockerignore
+.git
+.gitignore
