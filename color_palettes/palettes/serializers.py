@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Palette
+from palettes.models import Palette
 
 
 class PaletteSerializer(serializers.ModelSerializer):

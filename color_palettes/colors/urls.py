@@ -3,7 +3,7 @@ from colors.views import ColorViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'colors/', ColorViewSet, basename='color')
+router.register(r'', ColorViewSet, basename='color')
 
 urlpatterns = [
     path('', include(router.urls)),
