@@ -6,6 +6,7 @@
 - PostgreSQL для базы данных
 - Docker для контейнеризации и упрощения развертывания
 - drf-spectacular для Swagger документации API
+- Tecты реализованы при помощи APITestCase
 
 # Установка и запуск
 - Установите Docker и Docker Compose для вашей операционной системы.
