@@ -1,5 +1,5 @@
 from rest_framework import viewsets, permissions
-from .serializers import PaletteSerializer
+from palettes.serializers import PaletteSerializer
 
 
 class PaletteViewSet(viewsets.ModelViewSet):
