@@ -54,5 +54,7 @@ class ColorTests(APITestCase):
     def test_exit_forbidden(self):
         other_user = User.objects.create_user(username='otheruser', password='otherpassword')
         self.client.force_authenticate(user=other_user)
-        response = self.client.get(self.url_detail, format='json')
-        self.assertIn(response.status_code, [status.HTTP_403_FORBIDDEN, status.HTTP_404_NOT_FOUND])
+        response_retrieve = self.client.get(self.url_detail, format='json')
+        response_list = self.client.get(f"{self.url_list}?palette_id={self.palette.id}", format='json')
+        self.assertIn(response_retrieve.status_code, [status.HTTP_403_FORBIDDEN, status.HTTP_404_NOT_FOUND])
+        self.assertEqual(len(response_list.data), 0)

@@ -13,6 +13,7 @@ psycopg2-binary = "^2.9.9"
 djangorestframework-simplejwt = "^5.3.0"
 requests = "^2.31.0"
 drf-spectacular = "^0.26.4"
+django-filter = "^23.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
