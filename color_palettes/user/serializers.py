@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 
 class SignupSerializer(serializers.Serializer):
-    name = serializers.CharField()
+    first_name = serializers.CharField()
     username = serializers.CharField()
     password = serializers.CharField()
 

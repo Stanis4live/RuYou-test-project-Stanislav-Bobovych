@@ -11,7 +11,7 @@ class AuthTestCase(APITestCase):
         cls.signup_data = {
             'username': 'testuser',
             'password': 'testpassword',
-            'name': 'testname'
+            'first_name': 'testname'
         }
         cls.login_data = {
             'username': 'testuser',
@@ -21,7 +21,6 @@ class AuthTestCase(APITestCase):
 
     def test_signup(self):
         response = self.client.post(reverse('signup'), self.signup_data, format='json')
-
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIn('access', response.data)
         self.assertIn('refresh', response.data)

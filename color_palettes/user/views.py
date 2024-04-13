@@ -25,7 +25,7 @@ class SignupAPIView(APIView):
         User.objects.create_user(
             username=serializer.validated_data['username'],
             password=serializer.validated_data['password'],
-            name=serializer.validated_data['name']
+            first_name=serializer.validated_data['first_name']
         )
         token = authenticate_and_obtain_token(
             username=serializer.validated_data['username'],
